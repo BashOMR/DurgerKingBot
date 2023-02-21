@@ -12,16 +12,17 @@ const {
 } = process.env
 
 const dev = {
-  username: DEV_USERNAME,
-  password: DEV_PASSWORD,
-  database: DEV_DATABASE,
-  host: DEV_HOST,
-  port: DEV_PORT,
-  dialect: DEV_DIALECT,
+  username: process.env.DEV_USERNAME,
+  password: process.env.DEV_PASSWORD,
+  database: process.env.DEV_DATABASE,
+  host: process.env.DEV_HOST,
+  port: process.env.DEV_PORT,
+  dialect: process.env.DEV_DIALECT,
   logging: (msg) => {
     // console.log(msg);
   },
   define: { createdAt: false },
 };
+
 
 module.exports = { development: dev, test: null, production: null };
